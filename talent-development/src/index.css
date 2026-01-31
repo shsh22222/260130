@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  /* 鮮やかなカラーパレット - 組織変革をイメージ */
+  --color-primary-50: oklch(0.97 0.02 280);
+  --color-primary-100: oklch(0.93 0.05 280);
+  --color-primary-200: oklch(0.85 0.10 280);
+  --color-primary-300: oklch(0.75 0.15 280);
+  --color-primary-400: oklch(0.65 0.20 275);
+  --color-primary-500: oklch(0.55 0.25 270);
+  --color-primary-600: oklch(0.48 0.25 270);
+  --color-primary-700: oklch(0.40 0.22 270);
+  --color-primary-800: oklch(0.33 0.18 270);
+  --color-primary-900: oklch(0.28 0.14 270);
+
+  /* アクセントカラー - エネルギッシュなオレンジ/コーラル */
+  --color-accent-50: oklch(0.98 0.02 30);
+  --color-accent-100: oklch(0.94 0.06 30);
+  --color-accent-200: oklch(0.88 0.12 28);
+  --color-accent-300: oklch(0.80 0.18 25);
+  --color-accent-400: oklch(0.72 0.22 22);
+  --color-accent-500: oklch(0.65 0.25 20);
+  --color-accent-600: oklch(0.58 0.23 20);
+  --color-accent-700: oklch(0.50 0.20 20);
+
+  /* シアン/ティール - AIテクノロジーを表現 */
+  --color-tech-50: oklch(0.97 0.02 195);
+  --color-tech-100: oklch(0.93 0.05 195);
+  --color-tech-200: oklch(0.85 0.10 195);
+  --color-tech-300: oklch(0.75 0.15 195);
+  --color-tech-400: oklch(0.65 0.18 195);
+  --color-tech-500: oklch(0.55 0.18 195);
+  --color-tech-600: oklch(0.48 0.16 195);
+
+  /* グリーン - 成長を表現 */
+  --color-growth-50: oklch(0.97 0.02 145);
+  --color-growth-100: oklch(0.93 0.05 145);
+  --color-growth-200: oklch(0.85 0.12 145);
+  --color-growth-300: oklch(0.75 0.18 145);
+  --color-growth-400: oklch(0.65 0.20 145);
+  --color-growth-500: oklch(0.55 0.20 145);
+  --color-growth-600: oklch(0.48 0.18 145);
+
+  /* グラデーション */
+  --gradient-hero: linear-gradient(135deg, oklch(0.55 0.25 270) 0%, oklch(0.50 0.22 300) 50%, oklch(0.65 0.25 20) 100%);
+  --gradient-card: linear-gradient(180deg, oklch(0.98 0.01 270) 0%, oklch(0.95 0.02 270) 100%);
+  --gradient-tech: linear-gradient(135deg, oklch(0.55 0.18 195) 0%, oklch(0.55 0.25 270) 100%);
+
+  /* フォント */
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+  /* アニメーション */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
+  --animate-gradient: gradient-shift 8s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #fafafa 0%, #f0f0f5 100%);
+  min-height: 100vh;
+}
+
+/* 鮮やかなグラデーションテキスト */
+.gradient-text {
+  background: linear-gradient(135deg, oklch(0.55 0.25 270) 0%, oklch(0.65 0.25 20) 50%, oklch(0.55 0.18 195) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 5s ease infinite;
+}
+
+/* グラスモーフィズム効果 */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.65 0.15 270);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.55 0.20 270);
+}
