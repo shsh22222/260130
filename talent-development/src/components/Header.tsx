@@ -16,6 +16,7 @@ const Header = () => {
 
   const navItems = [
     { label: 'サービス', href: '#services' },
+    { label: '代表紹介', href: '#about' },
     { label: '特徴', href: '#features' },
     { label: '導入事例', href: '#cases' },
     { label: 'お問い合わせ', href: '#contact' },
